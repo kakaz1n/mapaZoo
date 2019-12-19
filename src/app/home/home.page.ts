@@ -13,6 +13,8 @@ export class HomePage {
   constructor(private screenOrientation: ScreenOrientation) {
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
   }
+  card : boolean = false;
+  
   @ViewChild('slider',{ read: ElementRef, static: true }) slider: ElementRef;
   sliderOpts = {
     zoom :{
@@ -37,6 +39,10 @@ export class HomePage {
     }else{
       zoom.out();
     }
+  }
+  Card(abre: boolean){
+    this.card = !this.card;
+    console.log(this.card);
   }
 
 }

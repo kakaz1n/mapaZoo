@@ -24,6 +24,16 @@
       </div>      
     </ion-slide>
   </ion-slides>
+  <ion-fab id="teste_div">
+    <ion-icon name="settings" (click)="Card(true)">Animal</ion-icon>
+    <ion-fab list side="right">
+      <ion-card *ngIf="card">
+        <ion-card-content>
+          Informaçoes dos animais
+        </ion-card-content>
+      </ion-card>
+    </ion-fab>
+  </ion-fab>
 </ion-content>
 
 
