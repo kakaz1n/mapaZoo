@@ -2,10 +2,10 @@
     max-height: 100%;
     width: 100%;
 }*/
-ion-slide{
-    height: 100%;
-    width: 100%;
-}
+/*ion-slide{
+    height: 1000px;
+    width: 1000px;
+}*/
 .swiper-zoom-container {
     width: 100%;
     height: 100%;
@@ -15,17 +15,25 @@ ion-slide{
     text-align: center;
   }
   .swiper-zoom-container > img {
-    max-width: 100%;
+    //max-width: 100%;
     max-height: 100%;
     object-fit: contain;
   }
-#teste_div{
-    top: 587px;
-    left: 335px;
+/*#teste_div{
+    top: 600px;
+    left: 320px;
+}*/
+#teste_div2{
+  top: 600px;
+  left: 430px;
 }
 ion-icon {
   font-size: 40px; //Preferred size here
 }
 ion-card{
-  background-color: rgba(255,0,0,0.5);
+  background-color: rgba(255,255,255,);
+  text-decoration-color: black;
+}
+#mapa{
+  position: inherit;
 }
