@@ -28,73 +28,78 @@ export class HomePage {
   left: any = 0;
 
 
-  @ViewChild('slider', { read: ElementRef, static: true }) slider: ElementRef;
-  sliderOpts = {
+@ViewChild('slider', { read: ElementRef, static: true }) slider: ElementRef;
+sliderOpts = {
     zoom : {
-      maxRatio: 5
+      maxRatio: 2
+    },
+    on:{
+       click(){
+          this.getCoordinates(event);
+       }
     }
   };
-  @ViewChild('fab_Grandes_Primatas', { read: ElementRef, static: true }) fab_Grandes_Primatas_Ref: ElementRef;
-  @ViewChild('fab_Pequenos_Primatas_Brasileiros', { read: ElementRef, static: true }) fab_Pequenos_Primatas_Brasileiros_Ref: ElementRef;
-  @ViewChild('fab_Pequenos_Medios_Psitacideos', { read: ElementRef, static: true }) fab_Pequenos_Medios_Psitacideos_Ref: ElementRef;
-  @ViewChild('fab_Pavoes_Faisoes', { read: ElementRef, static: true }) fab_Pavoes_Faisoes_Ref: ElementRef;
-  @ViewChild('fab_Marreco', { read: ElementRef, static: true }) fab_Marreco_Ref: ElementRef;
-  @ViewChild('fab_Tamandua_Bandeira', { read: ElementRef, static: true }) fab_Tamandua_Bandeira_Ref: ElementRef;
-  @ViewChild('fab_Primatas_Africanos', { read: ElementRef, static: true }) fab_Primatas_Africanos_Ref: ElementRef;
-  @ViewChild('fab_Furao', { read: ElementRef, static: true }) fab_Furao_Ref: ElementRef;
-  @ViewChild('fab_Herpestidae', { read: ElementRef, static: true }) fab_Herpestidae_Ref: ElementRef;
-  @ViewChild('fab_Grou_Coroado', { read: ElementRef, static: true }) fab_Grou_Coroado_Ref: ElementRef;
-  @ViewChild('fab_Corujas', { read: ElementRef, static: true }) fab_Corujas_Ref: ElementRef;
-  @ViewChild('fab_Aves_Gigantes', { read: ElementRef, static: true }) fab_Aves_Gigantes_Ref: ElementRef;
-  @ViewChild('fab_Grandes_Psitacideos', { read: ElementRef, static: true }) fab_Grandes_Psitacideos_Ref: ElementRef;
-  @ViewChild('fab_Grandes_Ramphastideos', { read: ElementRef, static: true }) fab_Grandes_Ramphastideos_Ref: ElementRef;
-  @ViewChild('fab_Cracideos', { read: ElementRef, static: true }) fab_Cracideos_Ref: ElementRef;
-  @ViewChild('fab_Ouriço', { read: ElementRef, static: true }) fab_Ouriço_Ref: ElementRef;
-  @ViewChild('fab_Pequenos_Medios_Felinos', { read: ElementRef, static: true }) fab_Pequenos_Medios_Felinos_Ref: ElementRef;
-  @ViewChild('fab_Aquario', { read: ElementRef, static: true }) fab_Aquario_Ref: ElementRef;
-  @ViewChild('fab_Anta', { read: ElementRef, static: true }) fab_Anta_Ref: ElementRef;
-  @ViewChild('fab_Lobo_Guara', { read: ElementRef, static: true }) fab_Lobo_Guara_Ref: ElementRef;
-  @ViewChild('fab_Gralhas', { read: ElementRef, static: true }) fab_Gralhas_Ref: ElementRef;
-  @ViewChild('fab_Turaco_Orelha', { read: ElementRef, static: true }) fab_Turaco_Orelha_Ref: ElementRef;
-  @ViewChild('fab_Irara', { read: ElementRef, static: true }) fab_Irara_Ref: ElementRef;
-  @ViewChild('fab_Canguru', { read: ElementRef, static: true }) fab_Canguru_Ref: ElementRef;
-  @ViewChild('fab_Aves_Ribeirinhas', { read: ElementRef, static: true }) fab_Aves_Ribeirinhas_Ref: ElementRef;
-  @ViewChild('fab_Flamingo', { read: ElementRef, static: true }) fab_Flamingo_Ref: ElementRef;
-  @ViewChild('fab_Antilopes', { read: ElementRef, static: true }) fab_Antilopes_Ref: ElementRef;
-  @ViewChild('fab_Cervideos', { read: ElementRef, static: true }) fab_Cervideos_Ref: ElementRef;
-  @ViewChild('fab_Pinguinario', { read: ElementRef, static: true }) fab_Pinguinario_Ref: ElementRef;
-  @ViewChild('fab_Casa_Repteis', { read: ElementRef, static: true }) fab_Casa_Repteis_Ref: ElementRef;
-  @ViewChild('fab_Grandes_Felinos', { read: ElementRef, static: true }) fab_Grandes_Felinos_Ref: ElementRef;
-  @ViewChild('fab_Camelideos', { read: ElementRef, static: true }) fab_Camelideos_Ref: ElementRef;
-  @ViewChild('fab_Atoba', { read: ElementRef, static: true }) fab_Atoba_Ref: ElementRef;
-  @ViewChild('fab_Passariformes', { read: ElementRef, static: true }) fab_Passariformes_Ref: ElementRef;
-  @ViewChild('fab_Aves_Rapina', { read: ElementRef, static: true }) fab_Aves_Rapina_Ref: ElementRef;
-  @ViewChild('fab_Ilha_Primatas_Lago', { read: ElementRef, static: true }) fab_Ilha_Primatas_Lago_Ref: ElementRef;
-  @ViewChild('fab_Portaria', { read: ElementRef, static: true }) fab_Portaria_Ref: ElementRef;
-  @ViewChild('fab_Praça_Alimentaçao', { read: ElementRef, static: true }) fab_Praça_Alimentaçao_Ref: ElementRef;
-  @ViewChild('fab_Bebedouro', { read: ElementRef, static: true }) fab_Bebedouro_Ref: ElementRef;
-  @ViewChild('fab_Lanchonete', { read: ElementRef, static: true }) fab_Lanchonete_Ref: ElementRef;
-  @ViewChild('fab_EX', { read: ElementRef, static: true }) fab_EX_Ref: ElementRef;
-  @ViewChild('fab_Centro_Educaçao_Ambiental', { read: ElementRef, static: true }) fab_Centro_Educaçao_Ambiental_Ref: ElementRef;
-  @ViewChild('fab_Administraçao', { read: ElementRef, static: true }) fab_Administraçao_Ref: ElementRef;
-  @ViewChild('fab_Viveiro_Plantas', { read: ElementRef, static: true }) fab_Viveiro_Plantas_Ref: ElementRef;
-  @ViewChild('fab_Setor_Nutriçao', { read: ElementRef, static: true }) fab_Setor_Nutriçao_Ref: ElementRef;
-  @ViewChild('fab_Setor_Veterinario', { read: ElementRef, static: true }) fab_Setor_Veterinario_Ref: ElementRef;
-  @ViewChild('fab_Banheiro', { read: ElementRef, static: true }) fab_Banheiro_Ref: ElementRef;
-  @ViewChild('fab_Anfiteatro', { read: ElementRef, static: true }) fab_Anfiteatro_Ref: ElementRef;
+@ViewChild('fab_Grandes_Primatas', { read: ElementRef, static: true }) fab_Grandes_Primatas_Ref: ElementRef;
+@ViewChild('fab_Pequenos_Primatas_Brasileiros', { read: ElementRef, static: true }) fab_Pequenos_Primatas_Brasileiros_Ref: ElementRef;
+@ViewChild('fab_Pequenos_Medios_Psitacideos', { read: ElementRef, static: true }) fab_Pequenos_Medios_Psitacideos_Ref: ElementRef;
+@ViewChild('fab_Pavoes_Faisoes', { read: ElementRef, static: true }) fab_Pavoes_Faisoes_Ref: ElementRef;
+@ViewChild('fab_Marreco', { read: ElementRef, static: true }) fab_Marreco_Ref: ElementRef;
+@ViewChild('fab_Tamandua_Bandeira', { read: ElementRef, static: true }) fab_Tamandua_Bandeira_Ref: ElementRef;
+@ViewChild('fab_Primatas_Africanos', { read: ElementRef, static: true }) fab_Primatas_Africanos_Ref: ElementRef;
+@ViewChild('fab_Furao', { read: ElementRef, static: true }) fab_Furao_Ref: ElementRef;
+@ViewChild('fab_Herpestidae', { read: ElementRef, static: true }) fab_Herpestidae_Ref: ElementRef;
+@ViewChild('fab_Grou_Coroado', { read: ElementRef, static: true }) fab_Grou_Coroado_Ref: ElementRef;
+@ViewChild('fab_Corujas', { read: ElementRef, static: true }) fab_Corujas_Ref: ElementRef;
+@ViewChild('fab_Aves_Gigantes', { read: ElementRef, static: true }) fab_Aves_Gigantes_Ref: ElementRef;
+@ViewChild('fab_Grandes_Psitacideos', { read: ElementRef, static: true }) fab_Grandes_Psitacideos_Ref: ElementRef;
+@ViewChild('fab_Grandes_Ramphastideos', { read: ElementRef, static: true }) fab_Grandes_Ramphastideos_Ref: ElementRef;
+@ViewChild('fab_Cracideos', { read: ElementRef, static: true }) fab_Cracideos_Ref: ElementRef;
+@ViewChild('fab_Ouriço', { read: ElementRef, static: true }) fab_Ouriço_Ref: ElementRef;
+@ViewChild('fab_Pequenos_Medios_Felinos', { read: ElementRef, static: true }) fab_Pequenos_Medios_Felinos_Ref: ElementRef;
+@ViewChild('fab_Aquario', { read: ElementRef, static: true }) fab_Aquario_Ref: ElementRef;
+@ViewChild('fab_Anta', { read: ElementRef, static: true }) fab_Anta_Ref: ElementRef;
+@ViewChild('fab_Lobo_Guara', { read: ElementRef, static: true }) fab_Lobo_Guara_Ref: ElementRef;
+@ViewChild('fab_Gralhas', { read: ElementRef, static: true }) fab_Gralhas_Ref: ElementRef;
+@ViewChild('fab_Turaco_Orelha', { read: ElementRef, static: true }) fab_Turaco_Orelha_Ref: ElementRef;
+@ViewChild('fab_Irara', { read: ElementRef, static: true }) fab_Irara_Ref: ElementRef;
+@ViewChild('fab_Canguru', { read: ElementRef, static: true }) fab_Canguru_Ref: ElementRef;
+@ViewChild('fab_Aves_Ribeirinhas', { read: ElementRef, static: true }) fab_Aves_Ribeirinhas_Ref: ElementRef;
+@ViewChild('fab_Flamingo', { read: ElementRef, static: true }) fab_Flamingo_Ref: ElementRef;
+@ViewChild('fab_Antilopes', { read: ElementRef, static: true }) fab_Antilopes_Ref: ElementRef;
+@ViewChild('fab_Cervideos', { read: ElementRef, static: true }) fab_Cervideos_Ref: ElementRef;
+@ViewChild('fab_Pinguinario', { read: ElementRef, static: true }) fab_Pinguinario_Ref: ElementRef;
+@ViewChild('fab_Casa_Repteis', { read: ElementRef, static: true }) fab_Casa_Repteis_Ref: ElementRef;
+@ViewChild('fab_Grandes_Felinos', { read: ElementRef, static: true }) fab_Grandes_Felinos_Ref: ElementRef;
+@ViewChild('fab_Camelideos', { read: ElementRef, static: true }) fab_Camelideos_Ref: ElementRef;
+@ViewChild('fab_Atoba', { read: ElementRef, static: true }) fab_Atoba_Ref: ElementRef;
+@ViewChild('fab_Passariformes', { read: ElementRef, static: true }) fab_Passariformes_Ref: ElementRef;
+@ViewChild('fab_Aves_Rapina', { read: ElementRef, static: true }) fab_Aves_Rapina_Ref: ElementRef;
+@ViewChild('fab_Ilha_Primatas_Lago', { read: ElementRef, static: true }) fab_Ilha_Primatas_Lago_Ref: ElementRef;
+@ViewChild('fab_Portaria', { read: ElementRef, static: true }) fab_Portaria_Ref: ElementRef;
+@ViewChild('fab_Praça_Alimentaçao', { read: ElementRef, static: true }) fab_Praça_Alimentaçao_Ref: ElementRef;
+@ViewChild('fab_Bebedouro', { read: ElementRef, static: true }) fab_Bebedouro_Ref: ElementRef;
+@ViewChild('fab_Lanchonete', { read: ElementRef, static: true }) fab_Lanchonete_Ref: ElementRef;
+@ViewChild('fab_EX', { read: ElementRef, static: true }) fab_EX_Ref: ElementRef;
+@ViewChild('fab_Centro_Educaçao_Ambiental', { read: ElementRef, static: true }) fab_Centro_Educaçao_Ambiental_Ref: ElementRef;
+@ViewChild('fab_Administraçao', { read: ElementRef, static: true }) fab_Administraçao_Ref: ElementRef;
+@ViewChild('fab_Viveiro_Plantas', { read: ElementRef, static: true }) fab_Viveiro_Plantas_Ref: ElementRef;
+@ViewChild('fab_Setor_Nutriçao', { read: ElementRef, static: true }) fab_Setor_Nutriçao_Ref: ElementRef;
+@ViewChild('fab_Setor_Veterinario', { read: ElementRef, static: true }) fab_Setor_Veterinario_Ref: ElementRef;
+@ViewChild('fab_Banheiro', { read: ElementRef, static: true }) fab_Banheiro_Ref: ElementRef;
+@ViewChild('fab_Anfiteatro', { read: ElementRef, static: true }) fab_Anfiteatro_Ref: ElementRef;
 
-  logScrollStart() {
+logScrollStart() {
     console.log('logScrollStart : When Scroll Starts');
   }
 
-  logScrolling() {
+logScrolling() {
     console.log('logScrolling : When Scrolling');
   }
 
-  logScrollEnd() {
+logScrollEnd() {
     console.log('logScrollEnd : When Scroll Ends');
   }
-  zoom(zoomIn: boolean): void {
+zoom(zoomIn: boolean): void {
     const zoom = this.slider.nativeElement.swiper.zoom;
     if (zoomIn) {
       zoom.in();
@@ -103,12 +108,12 @@ export class HomePage {
     }
   }
   // tslint:disable-next-line: variable-name
-  Card(icon_name: string) {
+Card(icon_name: string) {
     //console.log(icon_name);
     if (icon_name === this.card) { return 1; }
     return 0;
   }
-  SetCard(word: string) {
+SetCard(word: string) {
     console.log(word);
     if (this.card === word) {
       this.card = '';
@@ -119,7 +124,7 @@ export class HomePage {
     //console.log(this.platform.height ());
     //console.log(3325 * this.tamanho / 14174 + ',' + (5562 * this.tamanho) / 14174);
   }
-  getCoordinates(event) {
+getCoordinates(event) {
     // tslint:disable-next-line: max-line-length
     if ((event.layerX >= (3303 * this.tamanho / 14174 - 165 * this.tamanho / 14174) && event.layerX <= (3303 * this.tamanho / 14174 + 165 * this.tamanho / 14174)) &&
         // tslint:disable-next-line: max-line-length

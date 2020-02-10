@@ -17,9 +17,9 @@
 [scrollX]="true"
 [scrollY]="true"
 [fullscreen]="true" style="width: 100vw;" >
-  <ion-slides [options]="sliderOpts" #slider>
-    <ion-slide style="width: 100vw;height: 100vw;">
-      <div class="swiper-zoom-container"(click)="getCoordinates($event)" >
+  <ion-slides [options]="sliderOpts" #slider >
+    <ion-slide style="width: 100vw;height: 100vw;" >
+      <div class="swiper-zoom-container"(click)="getCoordinates($event)"(onclick)="getCoordinates($event)">
         <img src="assets/imgs/mapa.jpg" usemap="#testemap" > 
        <!-- <map name="testemap">
           <area shape="circle" coords="((3325*{{tamanho}})/14174),((5562*{{tamanho}})/14174),165*{{tamanho}}/14174" alt="Grandes Primatas Brasileiros" (click)="SetCard('Grandes_Primatas')">
@@ -52,10 +52,12 @@
         <ion-fab #fab_Grandes_Primatas>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Grandes_Primatas')">
-              <ion-card-content>
-                <h2>Grandes Primatas</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Grandes Primatas</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>
+                <img src="assets/imgs/grandes_primatas.jpg" > 
+                <p>Descrição do setor <p> 
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -64,10 +66,12 @@
         <ion-fab #fab_Pequenos_Primatas_Brasileiros>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Pequenos_Primatas_Brasileiros')">
-              <ion-card-content>
-                <h2>Pequenos Primatas Brasileiros</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Pequenos Primatas Brasileiros</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/pequenos_primatas_brasileiros.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -76,10 +80,12 @@
         <ion-fab #fab_Pequenos_Medios_Psitacideos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Pequenos_Medios_Psitacideos')">
-              <ion-card-content>
-                <h2>Pequenos e Médios Psitacídeos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Pequenos e Médios Psitacídeos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/psitacideo.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -88,10 +94,12 @@
         <ion-fab #fab_Pavoes_Faisoes>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Pavoes_Faisoes')">
-              <ion-card-content>
-                <h2>Pavões e Faisões</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Pavões e Faisões</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>
+                <img src="assets/imgs/pavoes_faisoes.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -100,10 +108,12 @@
         <ion-fab #fab_Marreco>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Marreco')">
-              <ion-card-content>
-                <h2>Marreco</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Marreco</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>               
+                <img src="assets/imgs/marreco.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -112,10 +122,12 @@
         <ion-fab #fab_Tamandua_Bandeira>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Tamandua_Bandeira')">
-              <ion-card-content>
-                <h2>Tamanduá Bandeira</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Tamanduá Bandeira</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/tamandua_bandeira.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -124,10 +136,12 @@
         <ion-fab #fab_Primatas_Africanos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Primatas_Africanos')">
-              <ion-card-content>
-                <h2>Primatas Africanos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Primatas Africanos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/primatas_africanos.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -136,10 +150,12 @@
         <ion-fab #fab_Furao>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Furao')">
-              <ion-card-content>
-                <h2>Furão</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Furão</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/furao.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -148,10 +164,12 @@
         <ion-fab #fab_Herpestidae>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Herpestidae')">
-              <ion-card-content>
-                <h2>Herpestidae</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Herpestidae</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/herpestidae.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -160,10 +178,12 @@
         <ion-fab #fab_Grou_Coroado>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Grou_Coroado')">
-              <ion-card-content>
-                <h2>Grou Coroado</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Grou Coroado</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/grou_coroado.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -172,10 +192,12 @@
         <ion-fab #fab_Corujas>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Corujas')">
-              <ion-card-content>
-                <h2>Corujas</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Corujas</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/corujas.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -184,10 +206,12 @@
         <ion-fab #fab_Aves_Gigantes>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Aves_Gigantes')">
-              <ion-card-content>
-                <h2>Aves Gigantes</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Aves Gigantes</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/aves_gigantes.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -196,10 +220,12 @@
         <ion-fab #fab_Grandes_Psitacideos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Grandes_Psitacideos')">
-              <ion-card-content>
-                <h2>Grandes Psitacídeos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Grandes Psitacídeos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/psitacideo.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -208,10 +234,12 @@
         <ion-fab #fab_Grandes_Ramphastideos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Grandes_Ramphastideos')">
-              <ion-card-content>
-                <h2>Grandes Ramphastídeos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Grandes Ramphastídeos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/grandes_ramphastideos.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -220,10 +248,12 @@
         <ion-fab #fab_Cracideos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Cracideos')">
-              <ion-card-content>
-                <h2>Cracideos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Cracideos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/cracideos.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -232,10 +262,12 @@
         <ion-fab #fab_Ouriço>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Ouriço')">
-              <ion-card-content>
-                <h2>Ouríço</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Ouríço</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/ouriço.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -244,10 +276,12 @@
         <ion-fab #fab_Pequenos_Medios_Felinos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Pequenos_Medios_Felinos')">
-              <ion-card-content>
-                <h2>Pequenos e Médios Felinos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Pequenos e Médios Felinos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>               
+                <img src="assets/imgs/pequenos_medios_felinos.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -256,10 +290,12 @@
         <ion-fab #fab_Aquario>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Aquario')">
-              <ion-card-content>
-                <h2>Aquário</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Aquário</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/aquario.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -268,10 +304,12 @@
         <ion-fab #fab_Anta>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Anta')">
-              <ion-card-content>
-                <h2>Anta</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Anta</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/anta.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -280,10 +318,12 @@
         <ion-fab #fab_Lobo_Guara>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Lobo_Guara')">
-              <ion-card-content>
-                <h2>Lobo Guará</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Lobo Guará</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/lobo_guara.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -292,10 +332,12 @@
         <ion-fab #fab_Gralhas>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Gralhas')">
-              <ion-card-content>
-                <h2>Gralhas</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Gralhas</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/gralhas.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -304,10 +346,12 @@
         <ion-fab #fab_Turaco_Orelha>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Turaco_Orelha')">
-              <ion-card-content>
-                <h2>Turaco de Orelha</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Turaco de Orelha</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/turaco_orelha.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -316,10 +360,12 @@
         <ion-fab #fab_Irara>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Irara')">
-              <ion-card-content>
-                <h2>Irara</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Irara</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/irara.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -328,10 +374,12 @@
         <ion-fab #fab_Canguru>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Canguru')">
-              <ion-card-content>
-                <h2>Canguru</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Canguru</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/canguru.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -340,10 +388,12 @@
         <ion-fab #fab_Aves_Ribeirinhas>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Aves_Ribeirinhas')">
-              <ion-card-content>
-                <h2>Aves Ribeirinhas</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Aves Ribeirinhas</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/aves_ribeirinhas.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -352,10 +402,12 @@
         <ion-fab #fab_Flamingo>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Flamingo')">
-              <ion-card-content>
-                <h2>Flamingo</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Flamingo</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/flamingo.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -364,10 +416,12 @@
         <ion-fab #fab_Antilopes>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Antilopes')">
-              <ion-card-content>
-                <h2>Antílopes</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Antílopes</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/antilopes.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -376,10 +430,12 @@
         <ion-fab #fab_Cervideos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Cervideos')">
-              <ion-card-content>
-                <h2>Cervídeos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Cervídeos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/cervideos.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -388,10 +444,12 @@
         <ion-fab #fab_Pinguinario>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Pinguinario')">
-              <ion-card-content>
-                <h2>Pinguinário</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Pinguinário</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/pinguinario.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -400,10 +458,12 @@
         <ion-fab #fab_Casa_Repteis>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Casa_Repteis')">
-              <ion-card-content>
-                <h2>Casa dos Répteis</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Casa dos Répteis</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/repteis.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -412,10 +472,12 @@
         <ion-fab #fab_Grandes_Felinos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Grandes_Felinos')">
-              <ion-card-content>
-                <h2>Grandes Felinos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Grandes Felinos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/grandes_felinos.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -424,10 +486,12 @@
         <ion-fab #fab_Camelideos>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Camelideos')">
-              <ion-card-content>
-                <h2>Camelídeos</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Camelídeos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>               
+                <img src="assets/imgs/camelideos.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -436,10 +500,12 @@
         <ion-fab #fab_Atoba>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Atoba')">
-              <ion-card-content>
-                <h2>Atobá</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Atobá</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/atoba.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -448,10 +514,12 @@
         <ion-fab #fab_Passariformes>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Passariformes')">
-              <ion-card-content>
-                <h2>Passariformes</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Passariformes</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/passariformes.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -460,10 +528,12 @@
         <ion-fab #fab_Aves_Rapina>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Aves_Rapina')">
-              <ion-card-content>
-                <h2>Aves de Rapina</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Aves de Rapina</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/aves_rapina.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -472,10 +542,12 @@
         <ion-fab #fab_Ilha_Primatas_Lago>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Ilha_Primatas_Lago')">
-              <ion-card-content>
-                <h2>Ilha dos Primatas e Lago</h2>
-                <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+              <ion-card-header>
+                <ion-card-title>Ilha dos Primatas e Lago</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
+                <img src="assets/imgs/primatas_lago.jpg"> 
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -484,10 +556,12 @@
         <ion-fab #fab_Portaria>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Portaria')">
-              <ion-card-content>
-                <h2>Portaria</h2>
+              <ion-card-header>
+                <ion-card-title>Portaria</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>               
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -496,10 +570,12 @@
         <ion-fab #fab_Praça_Alimentaçao>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Praça_Alimentaçao')">
-              <ion-card-content>
-                <h2>Praça de Alimentação</h2>
+              <ion-card-header>
+                <ion-card-title>Praça de Alimentação</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -508,10 +584,12 @@
         <ion-fab #fab_Bebedouro>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Bebedouro')">
-              <ion-card-content>
-                <h2>Bebedouro</h2>
+              <ion-card-header>
+                <ion-card-title>Bebedouro</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -520,10 +598,12 @@
         <ion-fab #fab_Lanchonete>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Lanchonete')">
-              <ion-card-content>
-                <h2>Lanchonete</h2>
+              <ion-card-header>
+                <ion-card-title>Lanchonete</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -532,10 +612,12 @@
         <ion-fab #fab_EX>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('EX')">
-              <ion-card-content>
-                <h2>EX ??????</h2>
+              <ion-card-header>
+                <ion-card-title>EX ??????</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -544,10 +626,12 @@
         <ion-fab #fab_Centro_Educaçao_Ambiental>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Centro_Educaçao_Ambiental')">
-              <ion-card-content>
-                <h2>Centro de Educação Ambiental</h2>
+              <ion-card-header>
+                <ion-card-title>Centro de Educação Ambiental</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -556,10 +640,12 @@
         <ion-fab #fab_Administraçao>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Administraçao')">
-              <ion-card-content>
-                <h2>Administração</h2>
+              <ion-card-header>
+                <ion-card-title>Administração</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -568,10 +654,12 @@
         <ion-fab #fab_Viveiro_Plantas>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Viveiro_Plantas')">
-              <ion-card-content>
-                <h2>Viveiro de Plantas</h2>
+              <ion-card-header>
+                <ion-card-title>Viveiro de Plantas</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -580,10 +668,12 @@
         <ion-fab #fab_Setor_Nutriçao>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Setor_Nutriçao')">
-              <ion-card-content>
-                <h2>Setor de Nutrição</h2>
+              <ion-card-header>
+                <ion-card-title>Setor de Nutrição</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -592,10 +682,12 @@
         <ion-fab #fab_Setor_Veterinario>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Setor_Veterinario')">
-              <ion-card-content>
-                <h2>Setor Veterinário</h2>
+              <ion-card-header>
+                <ion-card-title>Setor Veterinário</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -604,10 +696,12 @@
         <ion-fab #fab_Banheiro>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Banheiro')">
-              <ion-card-content>
-                <h2>Banheiro</h2>
+              <ion-card-header>
+                <ion-card-title>Banheiro</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>                
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -616,10 +710,12 @@
         <ion-fab #fab_Anfiteatro>
           <ion-fab list side="right">
             <ion-card *ngIf="Card('Anfiteatro')">
-              <ion-card-content>
-                <h2>Anfiteatro</h2>
+              <ion-card-header>
+                <ion-card-title>Anfiteatro</ion-card-title>
+              </ion-card-header>
+              <ion-card-content fullscreen>               
                 <img src="assets/imgs/img_1.jpeg"> 
-                Descrição do setor
+                <p>Descrição do setor </p>
                 <ion-button> ir para o setor</ion-button>
               </ion-card-content>
             </ion-card>
@@ -628,8 +724,6 @@
       </div>          
     </ion-slide>    
   </ion-slides>
-  
-
 </ion-content>
 
 
